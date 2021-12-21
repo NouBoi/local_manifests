@@ -5,6 +5,8 @@
            revision="lineage-18.1" />
            
    <!-- Replacements -->
+  <remove-project name="android_packages_apps_FMRadio"/>
+  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="mi-sdm439" revision="lineage-18.1"/>
   <!-- <remove-project name="hardware_qcom_display"/> -->
   <!-- <project path="hardware/qcom-caf/msm8996/display" name="android_hardware_qcom_display" remote="henlo" revision="lineage-18.1-caf-msm8996"/> -->
 
@@ -20,5 +22,5 @@
   <project path="vendor/xiaomi/pine"           name="proprietary_vendor_xiaomi_pine"           groups="device" remote="henlo"/>
 
  <!-- MODs -->
-  <project path="vendor/miuicamera" name="vendor_MiuiCamera" remote="henlo" revision="eleven"/>
-</manifest
+  <project path="packages/apps/GCamGOPrebuilt" name="android_packages_apps_GCamGOPrebuilt" remote="henlo" revision="arrow-11.0"/>
+</manifest>
