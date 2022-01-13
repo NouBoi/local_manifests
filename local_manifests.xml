@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="henlo"
-           fetch="https://github.com/nouboi"
-           revision="lineage-18.1" />
-  <remote  name="mi-sdm439"
-           fetch="https://github.com/mi-sdm439" />
-           
-   <!-- Replacements -->
-  <remove-project name="android_packages_apps_FMRadio"/>
-  <remove-project name="android_packages_apps_Chromium"/>
-  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="mi-sdm439" revision="lineage-18.1"/>
-  <!-- <remove-project name="hardware_qcom_display"/> -->
-  <!-- <project path="hardware/qcom-caf/msm8996/display" name="android_hardware_qcom_display" remote="henlo" revision="lineage-18.1-caf-msm8996"/> -->
+
+   <remote  name="hsx02"
+           fetch="https://github.com/hsx02" />   
+ 
+   <remote  name="pxl"
+           fetch="https://github.com/PixelExperience" />   
+
+   <remote  name="dl"
+           fetch="https://github.com/dlwlrma123" />   
+
+ <!-- Replacement -->
+  <remove-project name="packages_resources_devicesettings"/>
+  <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="hsx02" revision="lineage-18.1"/>
+  <remove-project name="packages_apps_FMRadio"/>
+  <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="hsx02" revision="lineage-18.1"/>
+  <remove-project="platform_hardware_qcom_wlan"/>
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" remote="hsx02" revision="S"/>
+  <remove-project name="platform_hardware_qcom_display"/>
+  <remove-project name="platform_packages_apps_Camera2"/>
+  <project path="hardware/qcom-caf/msm8996/display" name="hardware_qcom-caf_display" remote="hsx02" revision="Aex-S"/>
+  <project path="external/ant-wireless/antradio-library" name="external_ant-wireless_antradio-library" remote="pxl" revision="twelve"/>
 
  <!-- Kernels -->
-<project path="kernel/xiaomi/sdm439"         name="xiaomi-sdm439-devs/android_kernel_xiaomi_sdm439" remote="github" revision="a11/lineageos"/>
+  <project path="kernel/xiaomi/sdm439" name="kernel_xiaomi_sdm439" remote="hsx02" revision="12.0"  clone-depth="1"/>
 
- <!-- Device Trees -->
-  <project path="device/xiaomi/sdm439-common"  name="android_device_xiaomi_sdm439-common"  groups="device" remote="henlo" revision="lineage-18.1-mod"/>
-  <project path="device/xiaomi/pine"           name="android_device_xiaomi_pine"           groups="device" remote="henlo"/>
-
- <!-- Vendor Trees -->
-  <project path="vendor/xiaomi/sdm439-common"  name="proprietary_vendor_xiaomi_sdm439-common"  groups="device" remote="henlo"/>
-  <project path="vendor/xiaomi/pine"           name="proprietary_vendor_xiaomi_pine"           groups="device" remote="henlo"/>
-
- <!-- MODs -->
-  <project path="packages/apps/GCamGOPrebuilt" name="android_packages_apps_GCamGOPrebuilt" remote="henlo" revision="arrow-11.0"/>
+ <!-- Trees -->
+  <project path="device/xiaomi/pine" name="device_xiaomi_pine" remote="hsx02" revision="Pex-12.0"/>
+  <project path="device/xiaomi/sdm439-common" name="device_xiaomi_sdm439-common" remote="hsx02" revision="12.0"/>
+  <project path="vendor/xiaomi/pine"  name="vendor_xiaomi_pine" remote="hsx02" revision="12.0"/>
+  <project path="vendor/xiaomi/sdm439-common"  name="vendor_xiaomi_sdm439-common" remote="hsx02" revision="12.0"/>
 </manifest>
