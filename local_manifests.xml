@@ -10,7 +10,7 @@
 <!-- selene trees -->
         <project path="device/xiaomi/selene" name="android_device_xiaomi_selene" remote="n" revision="lineage-19.0" clone-depth="1" />
         <project path="vendor/xiaomi/selene" name="android_vendor_xiaomi_selene" remote="p" revision="twelve" clone-depth="1" />
-        <project path="kernel/xiaomi/selene" name="android_kernel_xiaomi_selene" remote="p" revision="twelve" clone-depth="1" />
+        <project path="kernel/xiaomi/selene" name="Redmi-10-KeongBalap/android_kernel_xiaomi_selene.git" remote="github" revision="main" clone-depth="1" />
         <project path="vendor/xiaomi/mt6768-ims" name="android_vendor_xiaomi_mt6768-ims" remote="r" revision="twelve" clone-depth="1" />
         <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="s" revision="sc" clone-depth="1" />
 
