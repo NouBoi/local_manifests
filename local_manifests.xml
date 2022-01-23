@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-        <remote name="n" fetch="https://github.com/nouboi" />
-	<remote name="p" fetch="https://github.com/pizzascape" />
-        <remote name="r" fetch="https://github.com/Redmi-MT6768" />
-        <remote name="s" fetch="https://github.com/StatiXOS" />
-        <remote name="a" fetch="https://github.com/arrowos" />
-        
-<!-- selene trees -->
-        <project path="device/xiaomi/selene" name="android_device_xiaomi_selene" remote="n" revision="lineage-19.0" clone-depth="1" />
-        <project path="vendor/xiaomi/selene" name="android_vendor_xiaomi_selene" remote="p" revision="twelve" clone-depth="1" />
-        <project path="kernel/xiaomi/selene" name="Redmi-10-KeongBalap/android_kernel_xiaomi_selene.git" remote="github" revision="main" clone-depth="1" />
-        <project path="vendor/xiaomi/mt6768-ims" name="android_vendor_xiaomi_mt6768-ims" remote="r" revision="twelve" clone-depth="1" />
-        <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="n" revision="eleven" clone-depth="1" />
+  <remote  name="yazidkucrit"
+           fetch="https://github.com/yazidkucrit"
+           revision="main"/>
+  
+  <remote  name="surblazer"
+           fetch="https://github.com/surblazer"
+           revision="twelve"/>
+           
+  <remote  name="pizzascape"
+           fetch="https://github.com/pizzascape"
+           revision="twelve"/>
+           
+  <remote  name="AOSP-12-RMX2020"
+           fetch="https://github.com/AOSP-12-RMX2020"
+           revision="twelve"/>
+
+ <!-- Kernel -->
+  <project path="kernel/xiaomi/selene" name="android_kernel_xiaomi_selene" remote="pizzascape"/>
+
+ <!-- Vendor Trees -->
+  <project path="vendor/xiaomi/selene" name="android_vendor_xiaomi_selene" remote="yazidkucrit"/>
+  <project path="vendor/mediatek-ims" name="vendor_mediatek-ims" remote="surblazer"/>
+  
+ <!-- Extras device -->
+  <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="AOSP-12-RMX2020"/>
 
 </manifest>
